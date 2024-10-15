@@ -1,4 +1,4 @@
-Hint: The FM prefix suppresses the four spaces that would normally follow 'March'.
+
 WITH hourly_data AS (
     SELECT * 
     FROM {{ ref('staging_weather_hourly') }}
