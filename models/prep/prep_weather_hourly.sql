@@ -26,6 +26,5 @@ add_more_features AS (
         END) AS day_part -- Categorize time of day into day parts
     FROM add_features
 )
-
 SELECT *
 FROM add_more_features
