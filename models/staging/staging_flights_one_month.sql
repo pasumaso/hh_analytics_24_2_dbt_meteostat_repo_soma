@@ -1,5 +1,3 @@
-
-
 WITH flights_one_month AS (
     SELECT * 
     FROM 'staging_flights', 'flights'
