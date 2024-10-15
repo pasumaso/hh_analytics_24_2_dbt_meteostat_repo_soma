@@ -44,6 +44,9 @@ models:
     staging:
       +materialized: table  # Override materialization for models in `staging`
       +schema: staging  # Set schema for staging models
+    prep:
+      +materialized: table  # Override materialization for models in `prep`
+      +schema: staging  # Set schema for staging models
     mart:
       +materialized: incremental  # Override materialization for models in `mart`
       +incremental_strategy: insert_overwrite
