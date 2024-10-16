@@ -2,7 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'my_new_project'
+name: 'hh_analytics_24_2_dbt_meteostat_repo_soma'
 version: '1.0.0'
 config-version: 2
 
@@ -36,28 +36,25 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  my_dbt_project:  # The name of the project
-  # Applies to all files under models/example/
+  hh_analytics_24_2_dbt_meteostat_repo_soma:
+    +materialized: view  # Default to views for all models in the root
     example:
       +materialized: table
-      +materialized: view  # Default materialization method
     staging:
-      +materialized: table  # Override materialization for models in `staging`
-      +schema: staging  # Set schema for staging models
+      +materialized: table
     prep:
-      +materialized: table  # Override materialization for models in `prep`
-      +schema: staging  # Set schema for staging models
+      +materialized: table
     mart:
-      +materialized: incremental  # Override materialization for models in `mart`
-      +incremental_strategy: insert_overwrite
+      +materialized: incremental
+      
 
 # Configurations for seeds
 seeds:
-  my_dbt_project:
+  hh_analytics_24_2_dbt_meteostat_repo_soma:
     +schema: raw_data
     +quote_columns: true
 
 # Configurations for snapshots
 snapshots:
-  my_dbt_project:
+  hh_analytics_24_2_dbt_meteostat_repo_soma:
     +schema: snapshots
